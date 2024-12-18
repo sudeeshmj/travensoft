@@ -33,7 +33,7 @@ This repository contains the implementation of a Weekly Update Management System
 
 1. Clone the repository:
    ```bash
- https://github.com/sudeeshmj/travensoft.git
+   git clone https://github.com/sudeeshmj/travensoft.git
    cd your-repo
    ```
 
