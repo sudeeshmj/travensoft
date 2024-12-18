@@ -40,22 +40,26 @@ This repository contains the implementation of a Weekly Update Management System
 2. Install dependencies:
    ```bash
    composer install
-   npm install
    ```
 
 3. Set up the environment variables:
    - Copy `.env.example` to `.env`:
      ```bash
-     cp .env.example .env
+     copy .env.example .env
      ```
    - Update the `.env` file with database credentials.
 
-4. Run migrations and seed the database:
+4. Generate key:
+   ```bash
+   php artisan key:generate
+   ```
+
+5. Run migrations and seed the database:
    ```bash
    php artisan migrate --seed
    ```
 
-5. Start the development server:
+6. Start the development server:
    ```bash
    php artisan serve
    ```
