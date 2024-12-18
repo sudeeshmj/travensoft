@@ -112,6 +112,8 @@ $(document).ready(function () {
                 url: viewUrl,
                 type: "GET",
                 success: function (response) {
+                    console.log(response);
+
                     const content =
                         response.content !== null ? response.content : "--";
 
@@ -123,8 +125,7 @@ $(document).ready(function () {
                     console.log(response);
                     $("#view_emp_name").html(response.user.name);
                     $("#view_dept_name").html(response.department.name);
-                    $("#view_created_at").html(response.created_at);
-                    $("#view_created_at").html(response.created_at);
+                    $("#view_created_at").html(response.formatted_created_at);
                     $("#view_note_content").html(content);
                     $("#view_note_attachement")
                         .attr("href", downloadLink)
