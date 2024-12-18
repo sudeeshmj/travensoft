@@ -1,66 +1,116 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Pharma Company Weekly Update Management System
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+This repository contains the implementation of a Weekly Update Management System for a reputed pharma company using Laravel 11 and supporting technologies. The system allows employees to provide weekly updates on their work and provides department heads with tools to manage and view updates for their respective departments.
 
-## About Laravel
+## Features
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+### Employee Features
+- **Registration and Login**: Employees can register and log in using their credentials.
+- **Weekly Updates**: Employees can submit weekly updates in text, image, or PDF format using a Quill rich text editor.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+### Department Head Features
+- **Login**: Department heads log in using pre-allocated credentials.
+- **View Updates**: View a list of updates provided by employees in their department.
+- **Filter Updates**: Filter updates by employee.
+- **Dashboard**: A dashboard displaying the number of updates posted by each employee. Clicking on an employee's record lists their updates.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+### Administrator Features
+- **Data Management**: Create, update, and delete entities such as employees, department heads, and updates as needed.
 
-## Learning Laravel
+## Technology Stack
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+### Backend
+- **Framework**: Laravel 11
+- **PHP**: 8.3.14
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+### Frontend
+- **Rich Text Editor**: Quill.js
+- **CSS Framework**: Bootstrap 5
+- **Icons**: Font Awesome 6.7.2
+- **Notifications**: Toastr.js for user-friendly notifications
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+## Installation
 
-## Laravel Sponsors
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-username/your-repo.git
+   cd your-repo
+   ```
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+2. Install dependencies:
+   ```bash
+   composer install
+   npm install
+   ```
 
-### Premium Partners
+3. Set up the environment variables:
+   - Copy `.env.example` to `.env`:
+     ```bash
+     cp .env.example .env
+     ```
+   - Update the `.env` file with your database and email credentials.
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+4. Run migrations and seed the database:
+   ```bash
+   php artisan migrate --seed
+   ```
 
-## Contributing
+5. Start the development server:
+   ```bash
+   php artisan serve
+   ```
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+6. Compile frontend assets:
+   ```bash
+   npm run dev
+   ```
 
-## Code of Conduct
+## Usage
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+1. Navigate to the application in your browser:
+   ```
+   http://localhost:8000
+   ```
 
-## Security Vulnerabilities
+2. Register as an employee or log in as a department head using pre-allocated credentials.
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+3. Employees can submit weekly updates from their dashboard.
+
+4. Department heads can view and filter updates from their dashboard.
+
+5. Administrators can manage all entities from the admin panel.
+
+## Directory Structure
+
+- `app/Models`: Models for Employees, Updates, and Departments
+- `app/Http/Controllers`: Controllers for handling business logic
+- `resources/views`: Blade templates for frontend views
+- `routes/web.php`: Application routes
+
+## Dependencies
+
+- Laravel 11
+- PHP 8.3.14
+- Quill.js
+- Bootstrap 5
+- Font Awesome 6.7.2
+- Toastr.js
+
+## Screenshots
+
+### Employee Dashboard
+![Employee Dashboard](path/to/screenshot1.png)
+
+### Department Head Dashboard
+![Department Head Dashboard](path/to/screenshot2.png)
+
+### Administrator Panel
+![Admin Panel](path/to/screenshot3.png)
 
 ## License
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+This project is licensed under the [MIT License](LICENSE).
+
+## Contributors
+
+ - Developer
