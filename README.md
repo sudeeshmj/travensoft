@@ -34,7 +34,7 @@ This repository contains the implementation of a Weekly Update Management System
 1. Clone the repository:
    ```bash
    git clone https://github.com/sudeeshmj/travensoft.git
-   cd your-repo
+   cd travensoft
    ```
 
 2. Install dependencies:
